@@ -1,0 +1,52 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+<p style="text-align: center;"> Estos son los modelos que tenemos en Stock Actualmente </p> 
+    
+    {% endblock %}
+
+{%block texto%}
+
+<br>
+
+{% if request.user.is_superuser %}
+<a href="{% url 'Crear_stockpropio' %}" style="position:absolute"> Crear Stock</a> 
+{% endif %}   
+
+{% for pedal in modelopropio %}
+
+    <p style="color:darkred; text-align: center; font-size:200%"> Modelo: {{pedal.modelo}} </p> 
+    <hr>
+    <p style="color: blue; text-align: center; font-size:150%; "> Efecto:  {{pedal.efecto}} </p> 
+    <hr>
+    <p style="text-align: justify; font-weight:bold;" > Reseña: {{pedal.descripcion}}</p> 
+    <hr>
+    <p>Precio: {{pedal.precio}}</p> 
+    <hr>
+    <p> En Stock: {{pedal.unidades}}</p> 
+
+    {% if request.user.is_superuser %}
+        <button>
+
+        <a href="{% url 'Eliminar_stockpropio' pedal.modelo %}"> Eliminar Stock</a>
+                                                             
+        </button>
+    
+        <button>
+        <a href="{% url 'Editar_stockpropio' pedal.modelo %}"> Editar Stock</a>
+        </button>
+    {% else %}
+
+    {% endif %}
+    <button>
+
+                                                                           
+{% endfor %}
+
+
+
+{% endblock %}
+

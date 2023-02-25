@@ -1,0 +1,25 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+Nueva Reparación
+
+{% endblock %}
+
+{%block texto%}
+
+<form action="" method= "POST"> {% csrf_token %}
+
+
+    {{form.as_p}}
+
+    <input type="submit" name="Enviar">
+    <button><a href="{% url 'ReparacionLeer' %}"> Regresar </a></button> 
+
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+setup.py
+Segunda_pre_entrega_LEDER.egg-info/PKG-INFO
+Segunda_pre_entrega_LEDER.egg-info/SOURCES.txt
+Segunda_pre_entrega_LEDER.egg-info/dependency_links.txt
+Segunda_pre_entrega_LEDER.egg-info/top_level.txt

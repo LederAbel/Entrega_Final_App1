@@ -1,0 +1,31 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<p style="text-align: center;">  Reparacion para hacer: </p>
+    
+{% endblock %}
+
+{%block texto%}
+
+<p> Nombre: {{reparacion.nombre}}</p>
+<hr>
+<p> Efecto:  {{reparacion.efecto}} </p>
+<hr>
+<p> volts: {{reparacion.volts}}</p>  
+<hr>
+<p>Made: {{reparacion.made}}</p>
+<hr>
+<p>Falla: {{reparacion.falla}}</p>
+<hr>
+<p>Envio: {{reparacion.envio}}</p>
+<hr>
+<p>Fecha de ingreso: {{reparacion.fechapedido}}</p>
+
+<a href="{% url 'ReparacionLeer' %}"> Regresar </a>
+
+
+{% endblock %}

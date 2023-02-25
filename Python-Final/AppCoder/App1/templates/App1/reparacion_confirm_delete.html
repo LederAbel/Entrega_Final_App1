@@ -1,0 +1,25 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+Eliminar Reparación
+
+{% endblock %}
+
+{%block texto%}
+
+<form action="" method= "POST"> {% csrf_token %}
+
+
+   <p>¿Seguro que vas a borrar la reparación?</p>
+
+    <button type="submit"> Borrar </button>
+    <button><a href="{% url 'ReparacionLeer' %}"> Regresar </a></button> 
+
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+<p style="text-align: center;"> Lista de Reparaciones </p>
+    
+{% endblock %}
+
+{%block texto%}
+
+<a href="{% url 'ReparacionCrear' %}" > Nueva Reparacion </a>
+    
+{% for reparacion in object_list %}
+
+    
+    <p> {{reparacion.cliente}}  
+    <hr>
+     Modelo: {{ reparacion.nombre }} 
+    <hr>
+    Fecha de pedido: {{reparacion.fechapedido}}      
+    <br><br>
+    <li>
+    <a href="{% url 'ReparacionDetalle' reparacion.id %}" > Ver Reparacion </a>
+    <a href="{% url 'ReparacionActualizar' reparacion.id %}"> Editar Reparacion </a>
+    <a href="{% url 'ReparacionEliminar' reparacion.id %}"> Eliminar Reparacion</a></li>
+    <br>
+    <hr style="height: 1%;">
+    <br>
+    </p> 
+
+{% endfor %}
+
+
+{% endblock %}

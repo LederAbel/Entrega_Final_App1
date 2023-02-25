@@ -1,0 +1,22 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+Ingrese su reparación y nos contactaremos
+
+{% endblock %}
+
+{%block texto%}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table>
+
+            {{form2.as_table}}
+
+    </table>
+
+{% endblock %}

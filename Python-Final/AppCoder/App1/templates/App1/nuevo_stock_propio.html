@@ -1,0 +1,23 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+Agregar Nuevo Stock de Pedales Propios
+
+{% endblock %}
+
+{%block texto%}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table>
+
+            {{form1.as_table}}
+
+    </table>
+    <input type="submit" value="OK">
+    
+</form>
+{% endblock %}

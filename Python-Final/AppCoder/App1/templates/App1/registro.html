@@ -1,0 +1,27 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+SoY-uS : Dispositivos electrónicos para músicos
+<br>
+<hr style="height: 1%;">
+Registrar un nuevo usuario
+
+{% endblock %}
+
+{%block texto%}
+
+<form action="" method="POST">{% csrf_token %}
+
+
+    {{formulario.as_p}}
+
+    <button type="submit"> Registrarse</button>
+
+
+</form>
+
+{% endblock %}

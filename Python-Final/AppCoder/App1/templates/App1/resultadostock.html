@@ -1,0 +1,18 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<p>En la busqueda de: {{modelo}} </p>
+
+{% for modelo in modelos %}
+
+    <p>Del modelo {{modelo.modelo}}</p>
+    <p>Unidades en Stock: {{modelo.unidades}}</p>
+
+{% endfor %} 
+
+
+{% endblock %}
